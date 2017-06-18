@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-start": "nodemon server/index.js"
   },
-  "author": "Beth Johnson",
-  "license": "ISC",
+  "author": "Phong-Albert",
+  "license": "YellowSubs",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
@@ -19,15 +20,18 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.1.0",
+    "image-webpack-loader": "^3.3.0",
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "express": "^4.15.0",
-    "angular": "^1.6.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "jquery": "^3.1.1",
     "mongoose": "^4.8.6",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "prop-types": "^15.5.8",
+    "material-ui": "^0.18.0",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }
