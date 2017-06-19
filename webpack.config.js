@@ -1,7 +1,7 @@
 const path = require('path');
 
-const SRC_DIR = path.join(__dirname, '/react-client/src');
-const DIST_DIR = path.join(__dirname, '/react-client/dist');
+const SRC_DIR = path.join(__dirname, '/client/src');
+const DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
@@ -14,10 +14,8 @@ module.exports = {
       {
         test: /\.jsx?/,
         include: SRC_DIR,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015'],
-        },
+        exclude: ['node_modules'],
+        loader: 'babel-loader?presets[]=react,presets[]=es2015',
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
