@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   data: '',
 };
 
-function firstAction(state = INITIAL_STATE, { type, data }) {
+function messenger(state = INITIAL_STATE, { type, data }) {
   switch (type) {
     case FIRST_ACTION:
       return {
@@ -17,4 +17,4 @@ function firstAction(state = INITIAL_STATE, { type, data }) {
 }
 
 
-export default firstAction;
+export default messenger;

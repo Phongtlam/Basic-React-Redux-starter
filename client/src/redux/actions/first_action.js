@@ -1,6 +1,6 @@
 import { FIRST_ACTION } from './type';
 
-export const setProfile = data => ({
+export const firstAction = data => ({
   type: FIRST_ACTION,
   data,
 });
