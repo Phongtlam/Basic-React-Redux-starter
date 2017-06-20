@@ -7,6 +7,7 @@ const app = require('./app');
 
 const PORT = process.env.port || 3000;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
+  server.keepAliveTimeout = 0;
   console.log(`DeepSubs listening on port ${PORT}!`);
 });

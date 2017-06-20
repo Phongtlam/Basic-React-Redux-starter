@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --inline",
-    "server-start": "nodemon server/index.js",
+    "server-start": "node server/index.js",
     "start-OLD": "node server/index.js",
     "react-dev": "webpack -d --watch"
   },
