@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>HOT RELOAD</h1>
+        <h1>HO RELOAD</h1>
       </div>
     );
   }
@@ -32,4 +32,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
