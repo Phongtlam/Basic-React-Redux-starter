@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress --inline",
     "server-start": "node server/index.js",
-    "start-OLD": "node server/index.js",
+    "start-nodemon": "nodemon server/index.js",
     "react-dev": "webpack -d --watch"
   },
   "author": "Phong-Albert",
