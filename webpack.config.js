@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
-    publicPath: '/static/',
+    // publicPath: '/static/',
   },
   module: {
     loaders: [
@@ -22,7 +22,10 @@ module.exports = {
         test: /\.jsx?/,
         include: SRC_DIR,
         exclude: ['node_modules'],
-        loader: 'babel-loader?presets[]=react,presets[]=es2015',
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015'],
+        },
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
