@@ -1,8 +1,4 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import first_action from '../redux/actions/first_action';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>HOT RELOAD WORKS!</h1>
+        <h1>HOT RELOAD WORKS!!</h1>
       </div>
     );
   }
