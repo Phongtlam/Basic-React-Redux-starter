@@ -1,6 +1,5 @@
 node_modules
 npm-debug.log
 client/dist/
-react-client/
 .DS_Store
 package-lock.json
