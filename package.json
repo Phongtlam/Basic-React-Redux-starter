@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node server/index.js",
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress",
-    "server-dev": "node server/index.js",
     "dev": "webpack-dev-server --progress --inline",
     "nodemon": "nodemon server/index.js",
     "react-dev": "webpack -d --watch"
@@ -24,7 +23,6 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.1.0",
     "file-loader": "^0.11.2",
-    "html-webpack-plugin": "^2.28.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-dev-server": "^2.4.5",
@@ -38,6 +36,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.17.2",
     "express": "^4.15.0",
+    "html-webpack-plugin": "^2.28.0",
     "material-ui": "^0.18.0",
     "mongoose": "^4.8.6",
     "mysql": "^2.13.0",
