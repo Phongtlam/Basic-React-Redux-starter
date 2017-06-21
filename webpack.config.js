@@ -25,10 +25,17 @@ module.exports = {
       { test: /\.scss?$/,
         loader: 'style!css!sass',
         include: path.join(__dirname, 'src', 'styles') },
-      { test: /\.png$/,
-        loader: 'file' },
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file' },
+      { test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          { loader: 'file-loader',
+            options: {
+              query: { name: 'assets/[name].[ext]' },
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
