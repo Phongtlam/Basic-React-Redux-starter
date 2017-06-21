@@ -7,15 +7,18 @@ const DIST_DIR = path.join(__dirname, 'public');
 
 module.exports = {
   devtool: 'eval',
+
   entry: [
     'webpack-hot-middleware/client',
     `${SRC_DIR}/index.jsx`,
   ],
+
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
     publicPath: '/public/',
   },
+
   module: {
     loaders: [
       { test: /\.jsx?$/,
@@ -37,6 +40,7 @@ module.exports = {
       },
     ],
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
@@ -44,6 +48,7 @@ module.exports = {
       template: path.join(__dirname, './public/index.html'),
     }),
   ],
+
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
