@@ -3,3 +3,4 @@ npm-debug.log
 client/dist/
 .DS_Store
 package-lock.json
+## public/bundle.js ##
