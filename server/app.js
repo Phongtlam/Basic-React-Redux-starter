@@ -16,10 +16,10 @@ app.use(middleware.bodyParser.json());
 if (process.env.NODE_ENV !== 'production') {
   const compiler = middleware.webpack(webpackConfig);
 
-  app.use(middleware.webpackDevMiddleware(compiler, {
+  app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true, publicPath: webpackConfig.output.publicPath,
   }));
-  app.use(middleware.webpackHotMiddleware(compiler));
+  app.use(require('webpack-hot-middleware')(compiler));
 }
 
 // prod environment
