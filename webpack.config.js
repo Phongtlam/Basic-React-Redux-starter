@@ -4,9 +4,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 const SRC_DIR = path.join(__dirname, '/client/src');
-const DIST_DIR = path.join(__dirname, '/client/dist');
+const DIST_DIR = path.join(__dirname, 'public');
 
 module.exports = {
+  devtool: 'eval',
   entry: [
     'webpack-hot-middleware/client',
     `${SRC_DIR}/index.jsx`,
@@ -14,54 +15,27 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
-    // publicPath: '/static/',
+    publicPath: '/public/',
   },
   module: {
     loaders: [
-      {
-        test: /\.jsx?/,
-        include: SRC_DIR,
-        exclude: ['node_modules'],
+      { test: /\.jsx?/,
         loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015'],
-        },
-      }, {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              query: {
-                name: 'assets/[name].[ext]',
-              },
-            },
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              query: {
-                mozjpeg: {
-                  progressive: true,
-                },
-                gifsicle: {
-                  interlaced: true,
-                },
-                optipng: {
-                  optimizationLevel: 7,
-                },
-              },
-            },
-          }],
-      },
+        exclude: /node_modules/ },
+      { test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'src', 'styles') },
+      { test: /\.png$/,
+        loader: 'file' },
+      { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file' },
     ],
   },
   plugins: [
-    // new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, './client/src/index.html'),
+      template: path.join(__dirname, './public/index.html'),
     }),
   ],
   resolve: {
