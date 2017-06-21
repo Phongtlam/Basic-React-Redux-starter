@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --progress --inline",
     "nodemon": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
-    "heroku-postbuild": "NODE_ENV=production node server/index.js"
+    "heroku-postbuild": "node server/index.js"
   },
   "author": "Phong-Albert",
   "license": "ISC",
@@ -52,5 +52,6 @@
     "redux": "^3.7.0",
     "webpack": "^3.0.0",
     "redux-thunk": "^2.2.0"
-  }
+  },
+  "engine": "node 8.1.2"
 }
