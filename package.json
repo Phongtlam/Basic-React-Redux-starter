@@ -8,7 +8,7 @@
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress",
     "server-start": "webpack-dev-server --progress --inline",
     "server": "node src/index.jsx",
-    "nodemon": "nodemon server/index.jsx",
+    "nodemon": "nodemon server/index.js",
     "react-dev": "webpack -d --watch"
   },
   "author": "Phong-Albert",
