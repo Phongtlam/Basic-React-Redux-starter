@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --progress --inline",
     "nodemon": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
-    "heroku-postbuild": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "node server/index.js"
   },
   "author": "Phong-Albert",
   "license": "ISC",

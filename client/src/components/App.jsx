@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hot reload!!!!</h1>
+        <h1>Hot Reload!!!!</h1>
       </div>
     );
   }
