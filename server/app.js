@@ -4,7 +4,7 @@ const middleware = require('./middleware');
 
 const webpackConfig = require('../webpack.config');
 
-const indexPath = path.join(__dirname, '/../public/index.html');
+const indexPath = path.join(__dirname, '../public/index.html');
 const publicPath = express.static(path.join(__dirname, '../public'));
 
 
