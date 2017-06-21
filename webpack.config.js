@@ -1,7 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, 'public');
@@ -25,7 +24,7 @@ module.exports = {
       { test: /\.scss?$/,
         loader: 'style!css!sass',
         include: path.join(__dirname, 'src', 'styles') },
-      { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+      { test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file' },
       { test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
