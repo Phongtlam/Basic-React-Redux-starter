@@ -1,6 +1,8 @@
 const styles = {
-  chessBoard: {
-    squareSize: '70',
+  board: {
+    size: 70,
+    light: '#ffffff',
+    dark: '#808080',
   },
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Chessboard from './Chessboard';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>DeepSubs!!!!</h1>
+        <Chessboard />
       </div>
     );
   }

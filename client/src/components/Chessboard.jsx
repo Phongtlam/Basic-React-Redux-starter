@@ -1,7 +1,7 @@
 import React from 'react';
 import Board from 'react-chessdiagram';
 
-import styles from '../styles/styles'
+import styles from '../styles/styles';
 
 class Chessboard extends React.Component {
   constructor(props) {
@@ -19,13 +19,12 @@ class Chessboard extends React.Component {
     return (
       <Board
         fen={this.state.board}
-        squareSize={styles.chessBoard.squareSize}
+        squareSize={styles.board.size}
+        lightSquareColor={styles.board.light}
+        darkSquareColor={styles.board.dark}
       />
     );
   }
 }
 
 export default Chessboard;
-
-// need to import board and do move validation HotModuleReplacementPlugin
-// testing

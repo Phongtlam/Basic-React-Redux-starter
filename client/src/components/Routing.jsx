@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route } from 'react-router'
+import { Router, Route, Switch } from 'react-router'
 import { history } from '../redux/store';
 
 import App from './App';
@@ -8,11 +8,11 @@ import ListItem from './ListItem';
 
 const Routing = () => (
   <Router history={history}>
-    <div>
+    <Switch>
       <Route exact path="/" component={App} />
       <Route path="chessboard" component={Chessboard} />
       <Route path="listItem" component={ListItem} />
-    </div>
+    </Switch>
   </Router>
 );
 

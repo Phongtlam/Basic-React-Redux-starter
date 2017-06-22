@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import first from './first_action_reducer';
+import board from './boardReducer';
 
 // store
 const rootReducer = combineReducers({
   // reducers go here
   routing: routerReducer,
-  first,
+  board,
 });
 
 export default rootReducer;

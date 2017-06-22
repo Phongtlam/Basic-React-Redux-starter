@@ -1,8 +1,8 @@
 import { START_GAME } from './type';
 
-export const firstAction = data => ({
+export const newGame = board => ({
   type: START_GAME,
-  data,
+  board,
 });
 
 // thunk functions
