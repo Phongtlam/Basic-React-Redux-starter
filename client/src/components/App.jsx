@@ -13,7 +13,6 @@ class App extends React.Component {
     return (
       <div>
         <h1>DeepSubs!!!!</h1>
-        <Chessboard />
       </div>
     );
   }

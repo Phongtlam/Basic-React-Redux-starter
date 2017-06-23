@@ -10,6 +10,7 @@ module.exports = {
 
   entry: [
     'webpack-hot-middleware/client',
+    'webpack/hot/dev-server',
     `${SRC_DIR}/index.jsx`,
   ],
 
