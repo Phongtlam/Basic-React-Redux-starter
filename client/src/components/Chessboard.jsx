@@ -1,30 +1,33 @@
 import React from 'react';
 import Board from 'react-chessdiagram';
+import { connect } from 'react-redux';
+import propTypes from 'prop-types';
 
+import { startNewGame } from '../redux/actions/index';
 import styles from '../styles/styles';
 
-class Chessboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      board: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
-    };
-  }
 
-  componentWillMount() {
+const Chessboard = props => (
+  <Board
+    fen={props.boardState}
+    squareSize={styles.board.size}
+    lightSquareColor={styles.board.light}
+    darkSquareColor={styles.board.dark}
+  />
+);
 
-  }
+const mapStateToProps = ({ board }) => {
+  const { boardState } = board;
+  return {
+    boardState,
+  };
+};
 
-  render() {
-    return (
-      <Board
-        fen={this.state.board}
-        squareSize={styles.board.size}
-        lightSquareColor={styles.board.light}
-        darkSquareColor={styles.board.dark}
-      />
-    );
-  }
-}
+Chessboard.propTypes = {
+  boardState: propTypes.string,
+};
+Chessboard.defaultProps = {
+  boardState: '',
+};
 
-export default Chessboard;
+export default connect(mapStateToProps, { startNewGame })(Chessboard);
