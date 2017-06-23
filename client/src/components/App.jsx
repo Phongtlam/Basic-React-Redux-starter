@@ -1,22 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Chessboard from './Chessboard';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>DeepSubs!!!!</h1>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <nav>
+      <li><Link to="/chessboard">GAME</Link></li>
+    </nav>
+    <Chessboard />
+  </div>
+);
 
 
 export default App;
