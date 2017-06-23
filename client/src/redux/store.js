@@ -2,8 +2,6 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 
-// const store = createStore(rootReducer, {}, applyMiddleware(reduxThunk));
-
 export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, applyMiddleware(reduxThunk));
 
@@ -17,5 +15,3 @@ export default function configureStore(initialState) {
 
   return store;
 }
-
-// export default store;
