@@ -1,9 +1,9 @@
-##Basic starter repo for React/Redux with redux-thunk
+# Basic starter repo for React/Redux with redux-thunk
 -Webpack pre-config
 -mySQL and MongoDB installed
 -HMR and webpack configured for development
 
-Steps to start:
+## Steps to start:
 1. npm install to install dependencies.
 2. npm start: will run web-pack-dev server
 3. npm run dev: will launch dev environment with HMR
