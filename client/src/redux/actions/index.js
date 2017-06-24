@@ -1,5 +1,7 @@
-import { newGame } from './boardAction';
+import { firstAction } from './firstAction';
 
-export const startNewGame = boardState => (dispatch) => {
-  dispatch(newGame(boardState));
+export const firstActionAsync = boardState => (dispatch) => {
+  dispatch(firstAction(boardState));
 };
+
+// thunk function

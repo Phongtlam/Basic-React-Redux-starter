@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import board from './boardReducer';
+import firstAction from './firstActionReducer';
 
 // store
 const rootReducer = combineReducers({
   // reducers go here
-  board,
+  firstAction,
 });
 
 export default rootReducer;

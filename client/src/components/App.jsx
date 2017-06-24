@@ -1,26 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Chessboard from './Chessboard';
-import { startNewGame } from '../redux/actions/index';
+import { firstActionAsync } from '../redux/actions/index';
 
-const App = (props) => (
+const App = props => (
   <div>
-    {/* <nav>
-      <li><Link to="/chessboard">GAME</Link></li>
-    </nav> */}
-    <Chessboard />
-    <button type="button" onClick={props.startNewGame}>Start Game</button>
+    <button type="button" onClick={props.firstActionAsync}>firstAction</button>
+    <Link to="/list">Go to List Component</Link>
   </div>
 );
 
 App.defaultProps = {
-  startNewGame: propTypes.func,
+  firstActionAsync: propTypes.func,
 };
 
 App.propTypes = {
-  startNewGame: propTypes.func,
+  firstActionAsync: propTypes.func,
 };
 
-export default connect(null, { startNewGame })(App);
+export default connect(null, { firstActionAsync })(App);
